@@ -3,14 +3,8 @@ function [Y] = solve_midpoint(X, n, h)
     Y(1, 1:3) = X;
     
     for i = 2 : n + 1
-        X(1) = Y(i - 1, 1);
-        X(2) = Y(i - 1, 2);
-        X(3) = Y(i - 1, 3);
-
-        [F] = f(X + h / 2 * f(X));
-        
-        Y(i, 1) = X(1) + h * F(1);
-        Y(i, 2) = X(2) + h * F(2);
-        Y(i, 3) = X(3) + h * F(3);
+        Y_prev = Y(i - 1, :);
+        [F] = f(Y_prev + h / 2 * f(Y_prev));
+        Y(i, :) = Y_prev + h * F;
     end
 end
