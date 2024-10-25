@@ -16,16 +16,12 @@ function [Y] = solve_dopri8(X, n, h)
         ];
 
     b = [0.0417475	0	0	0	0	-0.0554523	0.239313	0.703511	-0.75976	0.660563	0.158187	-0.23811	0.25];
-    c = [0.0295532	0	0	0	0	-0.828606	0.311241	2.46735	-2.54694	1.44355	0.0794156	0.0444444	0];
-
-%     b = flip(b);
-%     c = flip(c);
-
+    
     Y = zeros(n + 1, 3);
     Y(1, 1:3) = X;
 
     for j = 2 : n + 1
-        k = zeros(length(c), 3);
+        k = zeros(length(b), 3);
         for i = 1 : length(k)
             dy = 0;
             for m = 1 : i - 1
@@ -45,4 +41,3 @@ function [Y] = solve_dopri8(X, n, h)
         Y(j, :) = Y(j - 1, :) + dy;
     end
 end
-
