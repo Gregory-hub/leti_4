@@ -128,7 +128,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=7937
-Used=53
+Used=54
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -140,7 +140,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=262
+Used=264
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -174,7 +174,7 @@ Pin="Plus",6,0,-6,-6
 Pin="Minus",0,0,-19,-6
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,0,1451,591
+Window Placement=2,3, -1,-1, -8,-31, 156,156,1611,732
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -441,7 +441,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.66666666666666663
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
