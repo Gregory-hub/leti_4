@@ -387,13 +387,13 @@ Rot=3
 Page=3
 
 [Attr]
-ON=-26,-27,VALUE
-V=15
+ON=-26,-41,PART
+V=V1
 Style=8192
 
 [Attr]
-ON=-26,-41,PART
-V=V1
+ON=-26,-27,VALUE
+V=15
 Style=8192
 
 [Comp]
@@ -409,13 +409,13 @@ Rot=3
 Page=3
 
 [Attr]
-ON=-31,-27,VALUE
-V=-15
+ON=-26,-41,PART
+V=V2
 Style=8192
 
 [Attr]
-ON=-26,-41,PART
-V=V2
+ON=-31,-27,VALUE
+V=-15
 Style=8192
 
 [Comp]
@@ -554,7 +554,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.66666666666666663
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -744,7 +744,7 @@ Scale 1=1
 Scale 2=1
 SB 3=506,46
 Scale 3=0.66666666666666663
-Px=1088,444
+Px=928,172
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1165,7 +1165,7 @@ CFill=#FFFFFF
 CBorder=None
 w=0
 AliasID1=1
-Pos=0.00087860000000001485,0.55116890356728943,0,0
+Pos=0.00040960000000000345,0.95282613254606474,0,0
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Text="Temperature=100"
 JustifyH=Left
@@ -1179,7 +1179,7 @@ CFill=#FFFFFF
 CBorder=None
 w=0
 AliasID1=1
-Pos=0.00087860000000001485,0.72556381471889952,0,0
+Pos=0.00040960000000000345,-0.029670388135137671,0,0
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Text="Temperature=0"
 JustifyH=Left
@@ -1193,7 +1193,7 @@ CFill=#FFFFFF
 CBorder=None
 w=0
 AliasID1=1
-Pos=0.00087860000000001485,0.80939019300249659,0,0
+Pos=0.00040960000000000345,-0.50192473921943659,0,0
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Text="Temperature=-50"
 JustifyH=Left
@@ -1493,7 +1493,7 @@ Analysis=Transient
 Plt=1
 AliasID=1
 XExp=T
-YExp=V(in)
+YExp=V(out)
 XRng=0.001
 YRng=AutoAlways
 Options=LINEARX,LINEARY
