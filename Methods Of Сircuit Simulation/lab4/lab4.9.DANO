@@ -1,0 +1,113 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                            Dynamic AC of lab4                            ***
+***                           12.11.2024 21:55:12                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+AC Voltages at Frequency=1e+006 (Mag, Degrees)
+==============================================
+Node               Voltage  Node               Voltage 
+OUT_A       1.013,101.151°  US                       0 
+UBE              1,4.277u°  OUT_B    990.277m,41.784m° 
+IN              1,-5.701u° 
+
+
+AC values for Bipolar Junction Transistors NPN (Mag, Degrees)
+=============================================================
+Instance:                       Q1
+Using model:               2N2222A
+
+Power AC Terms:
+PG                78.457u,-35.671°
+PD                 3.061u,-3.964f°
+PS                    95.504u,-90°
+
+AC Pin Currents:
+Ib                127.319u,51.403°
+Ic               101.348u,-78.849°
+Ie               99.028u,-179.958°
+Is                               0
+
+Device Variables:
+area                        1.000 
+vbe                         0.000 
+vce                         0.000 
+
+
+
+AC values for Resistor (Mag, Degrees)
+=====================================
+Instance:                        R1                    R2                 V2.RS
+
+Power AC Terms:
+PD                          51.357u                    5u               10.938p
+
+AC Pin Currents:
+Ir                101.348u,101.151°           10u,4.277u°    147.904u,-137.718°
+
+Device Variables:
+tc1                          0.000                 0.000                 0.000 
+tc2                          0.000                 0.000                 0.000 
+
+
+Instance:                        R3                    R4
+
+Power AC Terms:
+PD                              10u               49.032u
+
+AC Pin Currents:
+Ir                        20u,-180°     99.028u,-179.958°
+
+Device Variables:
+tc1                          0.000                 0.000 
+tc2                          0.000                 0.000 
+
+
+
+AC values for Capacitor (Mag, Degrees)
+======================================
+Instance:                        C1
+
+Power AC Terms:
+PS                     17.408p,-90°
+
+AC Pin Currents:
+Ic               147.904u,-137.718°
+
+Device Variables:
+ic                           0.000 
+
+
+
+AC values for Sine Source (Mag, Degrees)
+========================================
+Instance:                        V2
+Using model:                   60HZ
+
+Power AC Terms:
+PG                 73.952u,-42.282°
+
+AC Pin Currents:
+ISource          147.904u,-137.718°
+
+
+
+AC values for SPICE Source (Mag, Degrees)
+=========================================
+Instance:                       V1
+
+Power AC Terms:
+PG                               0
+
+AC Pin Currents:
+ISource            99.897u,95.515°
+
+

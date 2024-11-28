@@ -1,0 +1,131 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                            Dynamic DC of lab4                            ***
+***                           12.11.2024 21:55:20                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+OUT_A         7.345   US           10.000   UBE           3.279  
+OUT_B         2.671   IN            0.000  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:               Q1
+Using model:       2N2222A
+
+Beta Terms:
+BETADC            162.479 
+BETAAC            181.104 
+
+Capacitance Terms:
+CPI                84.825p
+CMU                12.563p
+CBX                 0.000 
+CJS                 0.000 
+
+Conductance Terms:
+GM                 10.471m
+
+Current Terms:
+IB                  1.634u
+IC                265.502u
+
+Resistance Terms:
+RPI                17.296K
+RX                  0.000 
+RO                391.960K
+
+Voltage Terms:
+VBE               607.507m
+VBC                -4.066 
+VCE                 4.674 
+
+Frequency Terms:
+FT               17.112MEG
+
+Power DC Terms:
+PD                  1.242m
+PS                  0.000 
+
+DC Pin Currents:
+Ib                  1.634u
+Ic                265.502u
+Ie               -267.136u
+Is                  0.000 
+
+Condition:
+State                  LIN
+
+Device Variables:
+area                1.000 
+vbe                 0.000 
+vce                 0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            R2         V2.RS            R3            R4
+V                   -2.655        -6.721         0.000        -3.279        -2.671 
+Power DC Terms:
+PD                 704.911u      451.737u        0.000       215.019u      713.615u
+
+DC Pin Currents:
+Ir                -265.502u      -67.211u        0.000       -65.577u     -267.136u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1
+V                    3.279 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Ic                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V2
+Using model:           60HZ
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                  10.000 
+Power DC Terms:
+PG                  3.327m
+
+DC Pin Currents:
+ISource          -332.713u
+
+
