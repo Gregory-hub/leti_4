@@ -1,0 +1,35 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                      AC Analysis Optimizer of lab6                       ***
+***                           03.12.2024 17:44:36                            ***
+********************************************************************************
+
+Find:
+   R3 Low=100 High=4k 
+
+That:
+   Maximizes Peak_Y(dB(v(out)),1,1) To=6
+
+Objective Function = -(Peak_Y(dB(v(out)),1,1))
+                                                                                                                                                                                             
+Minimizing the Objective Function
+
+Start With:
+   Existing
+
+Powell:
+   Start with:R3=993.814787 
+   Best: R3=497.091212 Function=-69.496203
+
+Best so far Powell: R3=497.091212 Function=-69.496203
+
+
+Final Result:
+   Powell
+   Start:   R3=993.814787 
+   Result:   R3=497.091212 Function=-69.496203
+
+Info:
+   Time=0.844 sec

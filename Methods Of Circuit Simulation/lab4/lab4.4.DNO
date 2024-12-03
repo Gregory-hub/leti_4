@@ -1,0 +1,29 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                           DC Analysis of lab4                            ***
+***                           01.11.2024 23:05:12                            ***
+********************************************************************************
+Limits
+======
+Variable 1 Method        Auto
+Variable 1 Name          TEMP
+Variable 1 Range         10,0,.5
+Variable 2 Method        None
+Variable 2 Name          
+Variable 2 Range         
+Temperature              Linear 27
+Number of Points         51
+Maximum Change %         5
+Run Options              Normal
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+*****************************************************
+
+
+
