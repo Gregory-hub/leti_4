@@ -11,7 +11,7 @@ solve = @solve_cd;
 
 n = max_time / h;
 
-p_step = 20e-3;
+p_step = 20e-1;
 min_p = 1;
 max_p = 10;
 
