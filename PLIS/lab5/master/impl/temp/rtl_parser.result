@@ -1,0 +1,18 @@
+[
+ {
+  "InstFile" : "C:/Users/lekto/Desktop/plis/lab5/master/src/master.v",
+  "InstLine" : 1,
+  "InstName" : "master",
+  "ModuleFile" : "C:/Users/lekto/Desktop/plis/lab5/master/src/master.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "master"
+ },
+ {
+  "InstFile" : "C:/Users/lekto/Desktop/plis/lab5/master/src/slave.v",
+  "InstLine" : 1,
+  "InstName" : "slave",
+  "ModuleFile" : "C:/Users/lekto/Desktop/plis/lab5/master/src/slave.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "slave"
+ }
+]

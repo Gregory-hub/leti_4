@@ -1,0 +1,21 @@
+{
+ "Device" : "GW1NR-9C",
+ "Files" : [
+  {
+   "Path" : "D:/Education/leti_4/PLIS/lab5/master/src/master.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Education/leti_4/PLIS/lab5/master/src/master_tb.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/Education/leti_4/PLIS/lab5/master/impl/temp/rtl_parser.result",
+ "Top" : "master",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

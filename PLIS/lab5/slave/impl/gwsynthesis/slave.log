@@ -1,0 +1,24 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab5\slave\src\slave.v'
+Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v'
+Compiling module 'slave_tb'("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":3)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":27)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":29)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":30)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":31)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":33)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":34)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":35)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":37)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":38)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":39)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":41)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":42)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":43)
+WARN  (EX3780) : Using initial value of 'clk' since it is never assigned("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":44)
+WARN  (EX2629) : Delay control is not supported for synthesis("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":46)
+ERROR (EX3718) : Loop count limit of 2000 was exceeded, forever loop never breaks("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":46)
+WARN  (EX3780) : Using initial value of 'clk' since it is never assigned("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":46)
+Module 'slave_tb' remains a black box due to errors in its contents("D:\Education\leti_4\PLIS\lab5\slave\src\slave_tb.v":3)
+GowinSynthesis finish
