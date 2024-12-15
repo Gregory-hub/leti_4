@@ -1,0 +1,15 @@
+-d D:\Education\leti_4\PLIS\hdmi_lab6_final\impl\gwsynthesis\hdmi.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst D:\Education\leti_4\PLIS\hdmi_lab6_final\src\hdmi.cst
+-cfg D:\Education\leti_4\PLIS\hdmi_lab6_final\impl\pnr\device.cfg
+-sdc D:\Education\leti_4\PLIS\hdmi_lab6_final\src\hdmi.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-correct_hold 1
+-route_maxfan 23
+-global_freq 50.000
