@@ -1,0 +1,54 @@
+clear
+
+a = 0.2;
+b = 0.2;
+c = 5.7;
+
+x = [0 0 0];
+h = 1e-2;
+max_time = 1000;
+solve = @solve_cd;
+
+n = max_time / h;
+
+a_step = 1e-2;
+a_min = 0;
+a_max = 0.37;
+
+b_step = 1e-2;
+b_min = 0;
+b_max = 2;
+
+c_step = 1e-1;
+c_min = 1;
+c_max = 10;
+
+a_array = a_min : a_step : a_max;
+b_array = b_min : b_step : b_max;
+c_array = c_min : c_step : c_max;
+
+figure
+title('Spectral Entropy')
+xlabel('a')
+ylabel('b')
+hold on
+
+SE = zeros(length(a), length(b));
+
+for i = 1 : length(a_array)
+    for j = 1 : length(b_array)
+        X = solve(x, n, h, a_array(i), b_array(j), c);
+        se = find_spectral_entropy(X(floor(9 * length(X) / 10) : end, 1));
+        SE(i,j) = se;
+    end
+end
+
+P = zeros(size(a_array, 2) * size(b_array, 2), 1);
+for i_a = 0 : size(a_array, 2) - 1
+    for i_b = 0 : size(b_array, 2) - 1
+        P(i_a * size(b_array) + b_i + 1, :) = [a(i_a), b(i_b)];
+    end
+end
+
+plot(P(1,:))
+grid on
