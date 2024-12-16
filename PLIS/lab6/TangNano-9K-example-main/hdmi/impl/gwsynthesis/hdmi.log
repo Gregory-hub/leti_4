@@ -1,6 +1,7 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_clkdiv\gowin_clkdiv.v'
+Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_prom\gowin_prom.v'
 Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_rpll\gowin_rpll.v'
 Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\hdmi\svo_defines.vh'
 Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\hdmi\svo_enc.v'
@@ -33,7 +34,6 @@ Undeclared symbol 'clk_p5', assumed default net type 'wire'("D:\Education\leti_4
 Undeclared symbol 'pll_lock', assumed default net type 'wire'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\top.v":14)
 Undeclared symbol 'clk_p', assumed default net type 'wire'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\top.v":18)
 Undeclared symbol 'sys_resetn', assumed default net type 'wire'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\top.v":24)
-Analyzing Verilog file 'D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_prom\gowin_prom.v'
 Compiling module 'top'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\top.v":1)
 Compiling module 'Gowin_rPLL'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_rpll\gowin_rpll.v":9)
 Compiling module 'Gowin_CLKDIV'("D:\Education\leti_4\PLIS\lab6\TangNano-9K-example-main\hdmi\src\gowin_clkdiv\gowin_clkdiv.v":9)

@@ -53,10 +53,10 @@ module svo_tcard #( `SVO_DEFAULT_PARAMS ) (
 	reg [SVO_BITS_PER_BLUE-1:0] b;
     
     reg [8:0] H = 'b0;
-    reg [7:0] S = 'd128;
-    reg [7:0] V = 'd128;
+    reg [7:0] S = 'd127;
+    reg [7:0] V = 'd127;
     reg [7:0] color_intensity = 8'd255;
-
+    
     reg [2:0] h;
     reg [7:0] v_min;
     reg [7:0] v_inc;
