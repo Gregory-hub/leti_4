@@ -27,7 +27,7 @@ c_min = 1;
 c_max = 10;
 c_step = (c_max - c_min) / (num_of_p_points - 1);
 
-min_h_pow = -4;
+min_h_pow = -3;
 max_h_pow = -1;
 h_pow_step = (max_h_pow - min_h_pow) / (num_of_p_points - 1);
 
@@ -68,33 +68,33 @@ c_array = c_min : c_step : c_max;
 % saveas(figures{3}, 'lle_cd_ab.png')
 
 
-figures = cell(length(funs), 1);
-
-for m = 1 : length(funs)
-    fun = funs{m};
-    
-    LLE = zeros(length(a_array), length(c_array));
-    for i = 1 : length(a_array)
-        for j = 1 : length(c_array)
-            lle = find_lle(h, x, max_time, interval_time, eps, fun, a_array(i), b, c_array(j));
-            LLE(i,j) = lle;
-        end
-    end
-    
-    figure
-    s = pcolor(a_array, c_array, LLE');
-    xlabel('a')
-    ylabel('c')
-    title('LLE')
-    s.EdgeColor = 'none';
-    colormap('bone')
-
-    figures{m} = gcf;
-end
-
-saveas(figures{1}, 'lle_euler_ac.png')
-saveas(figures{2}, 'lle_midpoint_ac.png')
-saveas(figures{3}, 'lle_cd_ac.png')
+% figures = cell(length(funs), 1);
+% 
+% for m = 1 : length(funs)
+%     fun = funs{m};
+% 
+%     LLE = zeros(length(a_array), length(c_array));
+%     for i = 1 : length(a_array)
+%         for j = 1 : length(c_array)
+%             lle = find_lle(h, x, max_time, interval_time, eps, fun, a_array(i), b, c_array(j));
+%             LLE(i,j) = lle;
+%         end
+%     end
+% 
+%     figure
+%     s = pcolor(a_array, c_array, LLE');
+%     xlabel('a')
+%     ylabel('c')
+%     title('LLE')
+%     s.EdgeColor = 'none';
+%     colormap('bone')
+% 
+%     figures{m} = gcf;
+% end
+% 
+% saveas(figures{1}, 'lle_euler_ac.png')
+% saveas(figures{2}, 'lle_midpoint_ac.png')
+% saveas(figures{3}, 'lle_cd_ac.png')
 
 
 figures = cell(length(funs), 1);
@@ -114,6 +114,7 @@ for m = 1 : length(funs)
     s = pcolor(a_array, h_array, LLE');
     xlabel('a')
     ylabel('h')
+    yscale('log')
     title('LLE')
     s.EdgeColor = 'none';
     colormap('bone')
