@@ -7,12 +7,13 @@ c = 5.7;
 X0_master = [1 1 1];
 X0_slave = [-2 -1 -4];
 h = 1e-2;
-max_time = 30;
+max_time = 1000;
 funs = { @solve_euler, @solve_midpoint, @solve_cd };
 
 n = round(max_time / h);
 
-K = [0, 0.5, 0];
+K_m = [0.5, 0, 0];
+K_s = [0, 0.5, 0];
 
 
 for m = 1 : length(funs)
@@ -31,11 +32,13 @@ for m = 1 : length(funs)
         
         X_m = Y_m(end, :);
         X_s = Y_s(end, :);
-        X_s = X_s + h * K .* (X_m - X_s);
+
+        X_m = X_m + h * K_m .* (X_s - X_m);
+        X_s = X_s + h * K_s .* (X_m - X_s);
         
         X_m_array(i, :) = X_m;
         X_s_array(i, :) = X_s;
-
+        
         E(i) = norm(X_m - X_s);
     end
     
@@ -69,8 +72,8 @@ for m = 1 : length(funs)
     subplot(3, 3, 2)
     hold on
     plot(t, X_s_array(:, 1), 'r');
-    grid on
     title('Slave')
+    grid on
     xlabel('time')
     ylabel('x1')
 
@@ -114,7 +117,7 @@ for m = 1 : length(funs)
     xlabel('time')
     ylabel('x3')
 
-    
+
     % figure
     % hold on
     % plot3(X_m_array(:,1), X_m_array(:,2), X_m_array(:,3));
