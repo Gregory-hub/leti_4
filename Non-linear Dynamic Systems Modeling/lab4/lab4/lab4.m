@@ -6,7 +6,7 @@ c = 5.7;
 
 x = [0 0 0];
 h = 1e-2;
-max_time = 2000;
+max_time = 20;
 solve = @solve_cd;
 
 n = max_time / h;
