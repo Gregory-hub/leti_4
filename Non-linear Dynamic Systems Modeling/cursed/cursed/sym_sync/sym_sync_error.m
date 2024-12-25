@@ -1,7 +1,7 @@
 clear; clc;
 
 TT = 100;               % Transient time
-CT = 100;                % Computation time
+CT = 300;                % Computation time
 WT = 1;                 % Window time
 
 h = 0.01;               % Integration step time
@@ -15,7 +15,7 @@ Kbackward = [0 10 0]';  % Synchronization coefficients for backward synchronizat
 X = [0 0 0]';           % Initial conditions for master system
 X1 = [3 -3 0]';         % Initial conditions for slave system
 itrs = 400;             % Amount of synchronization iterations
-y = 100;                % Final array decimation coefficient
+y = CT / WT;            % Final array decimation coefficient
 
 
 % Transient time calculation
@@ -62,7 +62,7 @@ hw = waitbar(0,'Please wait...');
 % Calculation of Forward-Backward synchronization for every y point in time domain
 for k = 1:m
     waitbar(k/m,hw,'Processing...');
-
+    
     X = Xwrite(:,k);
     %X1 = X1_start;
     X1 = X + 5;
@@ -71,13 +71,13 @@ for k = 1:m
         WT_forward(:,i) = X;
         X = method(X, [0 0 0], h, a, [0 0 0]);    
     end
-
+    
     % Formatting window array for backward synchronization
     WT_backward = flip(WT_forward');
     WT_backward = WT_backward';
-
+    
     %rms_error = log10(err1) - log10(err0);
-
+    
     for i = 1:itrs
         %Forward synch
         for j = 1:(ceil(WT/h)-1)
@@ -88,32 +88,75 @@ for k = 1:m
         for j = 1:(ceil(WT/h)-1)
             X1 = method(X1, WT_backward(:,j), -h, a, -Kbackward);            
         end
-
+        
         buffer_rms(i) = rms(buffer_norm);
     end
-
+    
     R_log = log10(buffer_rms(end)) - log10(buffer_rms(1)); 
     buffer_last_rms(k + 1) = log10(buffer_rms(end)) - log10(buffer_rms(1));
     buffer_last_err(k + 1) = buffer_rms(end);
-
+    
     Err = [Err, buffer_norm];
-
-    if(R_log <= -16)
+    
+    if(R_log <= -12)
         last_k = k;
         break
     end
 end
 
-close(hw);
 
-t = (0 : (min(m, last_k) - 1) * ceil(WT/h)) * h;
+% t = (0 : h : m * (length(buffer_norm) * h));
+% figure
+% plot(t, Err);
+% yscale('log')
+% xlabel('time')
+% ylabel('||Error||')
+% grid on
+
+
+
+q = last_k;
+
+Err_size = y*last_k;
+
+for i = 1:(Err_size - length(Err))
+    tmp_e = Err(end);
+    Err = [Err, tmp_e];
+end
+
+l_other = CT/h - Err_size;
+
+X = Xwrite(:, last_k);
+
+for i = 1:l_other
+    X = method(X, [0 0 0], h, a, [0 0 0]);
+    X1 = method(X1, [0 0 0], h, a, [0 0 0]);
+
+    % plot(i * h, X(1), 'b.', 'MarkerSize', 20);
+    % hold on
+    % plot(i * h, X1(1), 'r.', 'MarkerSize', 10);
+
+    Err3 = norm(abs(X1 - X));
+
+    Err = [Err, Err3];
+
+    if mod(i, y) == 0
+        q = q + 1;
+        pr = q/m;
+    end
+end
+
+
+
+tc = 0:h:(CT - h);
 
 figure
-plot(t, Err)
+plot(tc, Err)
 yscale('log')
 xlabel('time')
 ylabel('||Error||')
 grid on
 
-%isnan checking
-buffer_last_rms(isnan(buffer_last_rms)) = 1000000;
+
+close(hw);
+

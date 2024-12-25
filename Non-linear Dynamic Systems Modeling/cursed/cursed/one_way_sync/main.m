@@ -19,4 +19,3 @@ special_points(2, :) = [(c - sqrt(D)) / 2, -(c - sqrt(D)) / (2 * a), (c - sqrt(D
 
 X = fun(x, n, h, a, b, c);
 plot_3d_phase(X, special_points);
-

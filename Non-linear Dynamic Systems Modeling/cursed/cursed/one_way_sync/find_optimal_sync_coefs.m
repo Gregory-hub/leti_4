@@ -24,16 +24,16 @@ k_array = 0 : 0.1 : 6;
 % xlabel('k')
 % ylabel('Sync time, s')
 % grid on
-
+% 
 % f_sync_time = @(k) find_sync_error_stabilization_time(X0_master, X0_slave, h, n, fun, [0 k 0], a, b, c, 1e-12);
-
+% 
 % subplot(2, 1, 2)
 % plot(k_array, arrayfun(f_sync_time, k_array));
 % title('K = [0 k 0]')
 % xlabel('k')
 % ylabel('Sync time, s')
 % grid on
-
+% 
 % f_sync_time = @(k) find_sync_error_stabilization_time(X0_master, X0_slave, h, n, fun, [0 0 k], a, b, c, 1e-12);
 % 
 % figure

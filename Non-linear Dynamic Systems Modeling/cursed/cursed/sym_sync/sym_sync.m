@@ -1,7 +1,7 @@
 clear; clc;
 
 TT = 10;               % Transient time
-CT = 10;                % Computation time
+CT = 3;                % Computation time
 WT = 1;                 % Window time
 
 h = 0.01;               % Integration step time
@@ -20,8 +20,8 @@ y = 100;                  % Final array decimation coefficient
 
 % Transient time calculation
 for i = 1:ceil(TT/h)
-    X = method(X, [0 0 0], h, a, [0 0 0]);
-    X1 = method(X1, [0 0 0], h, a, [0 0 0]);
+    X = method(X, [0 0 0]', h, a, [0 0 0]);
+    X1 = method(X1, [0 0 0]', h, a, [0 0 0]);
 end
 
 X1_start = X1;
@@ -30,7 +30,7 @@ Xwrite = zeros(3, ceil(CT/h/y));
 % Time domain calculation
 m = 0;
 for i = 1:ceil(CT/h)
-    X = method(X, [0 0 0], h, a, [0 0 0]);
+    X = method(X, [0 0 0]', h, a, [0 0 0]);
     if mod(i, y) == 0
         m = m + 1;
         Xwrite(:, m)= X;
@@ -57,7 +57,7 @@ for k = 1:m
     % Window array calculation
     for i = 1:WT_iter
         WT_forward(:,i) = X;
-        X = method(X, [0 0 0], h, a, [0 0 0]);    
+        X = method(X, [0 0 0]', h, a, [0 0 0]);    
     end
     
     % Formatting window array for backward synchronization
@@ -94,7 +94,7 @@ zlabel('z')
 ylabel('y')
 xlabel('x')
 cb = colorbar();
-ylabel(cb,'log10(RMS(||Error||))', 'FontSize', 12, 'Rotation', 270)
+ylabel(cb,'log10(RMS(||Error||))', 'FontSize', 12, 'Rotation', 90)
 colormap([turbo(1000); 1-flip(copper(144));])
 caxis([-14 2])
 view(50, 30)

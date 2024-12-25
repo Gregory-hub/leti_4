@@ -7,14 +7,15 @@ c = 5.7;
 X0_master = [0 0 0];
 X0_slave = [1 2 3];
 h = 1e-2;
-max_time = 70;
-funs = { @solve_cd };
-% funs = { @solve_imp };
+max_time = 100;
+transient_time = 100;
+% funs = { @solve_cd };
+funs = { @solve_imp };
 
 n = round(max_time / h);
 
 % K = [0, 0.5, 0];
-K = [0, 2.07, 0];
+K = [0, 2.08, 0];
 
 for m = 1 : length(funs)
     fun = funs{m};
@@ -25,6 +26,14 @@ for m = 1 : length(funs)
     
     X_m = X0_master;
     X_s = X0_slave;
+    
+    for i = 1 : transient_time / h
+        Y_m = fun(X_m, 1, h, a, b, c);
+        Y_s = fun(X_s, 1, h, a, b, c);
+        
+        X_m = Y_m(end, :);
+        X_s = Y_s(end, :);
+    end
 
     wb = waitbar(0, 'Please wait...');
     for i = 1 : n
