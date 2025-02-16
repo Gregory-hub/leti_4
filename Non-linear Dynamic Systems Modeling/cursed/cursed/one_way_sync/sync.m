@@ -7,15 +7,15 @@ c = 5.7;
 X0_master = [0 0 0];
 X0_slave = [1 2 3];
 h = 1e-2;
-max_time = 100;
+max_time = 200;
 transient_time = 100;
 % funs = { @solve_cd };
 funs = { @solve_imp };
 
 n = round(max_time / h);
 
-% K = [0, 0.5, 0];
-K = [0, 2.08, 0];
+K = [0, 0.5, 0];
+% K = [0, 2.08, 0];
 
 for m = 1 : length(funs)
     fun = funs{m};
