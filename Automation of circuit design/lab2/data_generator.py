@@ -104,5 +104,3 @@ def generate_dataset_C(N: int):
     radii1 = [2, 6, 1]
 
     return nonlinear_dataset_13(cen0, cen1, radii0, radii1, N)
-
-
