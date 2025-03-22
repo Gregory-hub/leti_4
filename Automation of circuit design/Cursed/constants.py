@@ -1,0 +1,4 @@
+PRICE_THRESHOLD = 260
+LABEL_POSITIVE = "Price >= " + str(PRICE_THRESHOLD) + " USD"
+LABEL_NEGATIVE = "Price < " + str(PRICE_THRESHOLD) + " USD"
+IMAGE_PATH = "images/"
