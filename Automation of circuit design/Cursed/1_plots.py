@@ -5,7 +5,6 @@ from read_data import read_data
 from constants import *
 
 
-
 if __name__ == "__main__":
     df, column_names, col_investigated = read_data()
     column_names_for_barplots = ["brand", "os", "resolution", "announcement_date"]
